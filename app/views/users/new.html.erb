@@ -1,0 +1,13 @@
+<% unless @user.omniauth? %>
+  <div>
+    <%= image_tag('octocat.png', size: '200x200') %>
+    <%= link_to button_tag('Sign up via Github'), '/auth/github' %>
+  </div>
+  <div>
+    <h1>Signup</h1>
+  </div>
+<% else %>
+  <h1>Verify Details</h1>
+<% end %>
+
+<%= render 'users/form' %>
